@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">GifGallery</string>
+
+    <!-- General-->
+    <string name="no_internet_message">No internet connection. To fetch data, please, connect to the internet.</string>
+    <string name="ok">Ok</string>
+    <string name="close">Close</string>
+    <string name="error_default">Something went wrong</string>
+    <string name="error_default_db">Something went wrong with database</string>
+    <string name="no_internet_connection_title">No internet connection</string>
+    <string name="no_internet_connection_text">Something is wrong with your internet connection</string>
+    <string name="no_internet_connection_text_2">Something is wrong with your internet connection. Please check it.</string>
+    <string name="offline">You\'re offline.</string>
+    <string name="offline_interent_connection">You need an internet connection to view this page.</string>
+    <string name="offline_tap_to_refresh">Tap to refresh</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+    </string>
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.</string>
+
+    <!-- GitGallery-->
+    <string name="search">Search</string>
+    <string name="search_something">Search something in the toolbar</string>
+
+</resources>
