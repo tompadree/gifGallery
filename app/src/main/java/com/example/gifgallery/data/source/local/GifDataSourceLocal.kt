@@ -20,12 +20,10 @@ class GifDataSourceLocal(
     private val dispatchers: CoroutineDispatcher = Dispatchers.IO
 ) : GifDataSource {
 
-    /*TODO it can be spiked to look only on remote results bypassing local*/
+    // it can be spiked to look only on remote results bypassing local
     override fun observeGifs(searchQuery: String): LiveData<Result<List<GifModelDataItem>>> {
-        Log.e("TEST", " CURRENT_INDEX + PAGE_LIMIT= " + (CURRENT_INDEX + PAGE_LIMIT).toString())
         return dao.observeGifs("%$searchQuery%", 0, CURRENT_INDEX + PAGE_LIMIT)
             .map {
-                Log.e("TEST", " CURRENT_INDEX + PAGE_LIMIT it-.size= " + it.size)// "%$searchQuery%", , 0, CURRENT_INDEX
                 if(CURRENT_INDEX > it.size) CURRENT_INDEX = it.size
                 if (searchQuery.isNotEmpty())
                     Result.Success(it)

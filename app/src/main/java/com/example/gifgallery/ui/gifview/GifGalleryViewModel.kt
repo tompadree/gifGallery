@@ -124,7 +124,6 @@ class GifGalleryViewModel(
             viewModelScope.launch {
                 _currentPage.set(_currentPage.get()!!.plus(PAGE_LIMIT))
                 CURRENT_INDEX = _currentPage.get()!!
-                Log.e("TEST", "CURRENT_INDEX = " + CURRENT_INDEX)
                 loadGifs(true)
             }
         }

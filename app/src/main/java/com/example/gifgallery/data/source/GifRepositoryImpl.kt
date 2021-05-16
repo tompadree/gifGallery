@@ -23,7 +23,7 @@ class GifRepositoryImpl(
         gifDataSourceLocal.saveGifs(gifs)
     }
 
-    /*TODO it can be spiked to look only on remote results bypassing local*/
+    // it can be spiked to look only on remote results bypassing local
     override suspend fun getGifs(update: Boolean, searchQuery: String, offset: Int, limit: Int): Result<List<GifModelDataItem>> {
         if(update)
             try {

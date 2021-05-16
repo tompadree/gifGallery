@@ -29,19 +29,12 @@ class GifGalleryFragment : BindingFragment<GifGalleryFragmentBinding>() {
 
         setupObservers()
         setupRV()
-//        initVM()
-//
     }
 
     override fun onPause() {
         super.onPause()
         (context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
             .hideSoftInputFromWindow(activity?.currentFocus?.windowToken ?: return, 0)
-    }
-
-    private fun initVM() {
-//        viewModel._currentSearch.set("a")
-        viewModel.refresh(false)
     }
 
     private fun setupObservers() {
@@ -71,10 +64,6 @@ class GifGalleryFragment : BindingFragment<GifGalleryFragmentBinding>() {
             adapter = gifAdapter
             (this.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
 
-            // Set the number of offscreen views to retain before adding them
-            // to the potentially shared recycled view pool
-//            setItemViewCacheSize(2000)
-
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)
@@ -87,5 +76,4 @@ class GifGalleryFragment : BindingFragment<GifGalleryFragmentBinding>() {
             })
         }
     }
-
 }
