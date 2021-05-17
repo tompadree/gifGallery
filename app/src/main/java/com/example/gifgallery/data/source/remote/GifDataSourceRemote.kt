@@ -32,10 +32,6 @@ class GifDataSourceRemote(private val gifApi: GifApi) : GifDataSource {
                 val result = Result.Success(body!!.data)
                 observableGifs.value = result
                 return result
-            } else {
-                val test = response
-                val test1 = response
-
             }
         }
         return Result.Error(IOException("Error loading data " + "${response.code()} ${response.message()}"))
